@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  -webkit-tap-highlight-color: transparent !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply font-normal text-sm;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* .bottom-navbar {
+  max-width: 480px;
+} */
+
+.rundown-title {
+  margin-top: 10px;
+}
+
+.time-line {
+  margin-top: 260px;
+}
+
+@media screen and (max-width: 1300px) {
+  .rundown-title {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .rundown-title {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .content-center {
+    padding-top: 265px;
+  }
+
+  .rundown-title {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content-center {
+    padding-top: 255px;
+  }
+  .rundown-title {
+    margin-top: 70px;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  .content-center {
+    padding-top: 335px;
+  }
+
+  .rundown-title {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .rundown-title {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .time-line {
+    margin-top: 290px;
+  }
+  .rundown-title {
+    margin-top: 90px;
+  }
 }
