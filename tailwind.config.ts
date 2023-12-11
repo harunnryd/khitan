@@ -30,12 +30,16 @@ const config: Config = {
         dustygrey: "#989898",
         skull: "#F8F8F8",
         darkblue: "#190844",
+        bluesea: "#2CD0EC",
+        greensea: "#7FBAAB"
       },
       screens: {
         xs: "480px",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 };
 export default config;
